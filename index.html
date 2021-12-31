@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion Card</title>
+    <link rel="stylesheet" href="my-style.css">
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+<body>
+
+    <div class="wrapper">
+
+        <img src="/images/illustration-box-desktop.svg" class="box_illu">
+
+        <div class="img_container">
+            <div class="img_child_1"> </div>
+        </div>
+
+        <div class="faq_container">
+                <h2>FAQ</h2>
+
+                <div class="faq_container_childrens">
+
+                    <div class="child">
+                        <div class="child_header">
+                            <h3>How many team members can I invite?</h3>
+                            <img src="/images/icon-arrow-down.svg">
+                        </div>
+                        
+                        <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+                    </div>
+
+                    <div class="child">
+                        <div class="child_header">
+                            <h3>What is the maximum file upload size?</h3>
+                            <img src="/images/icon-arrow-down.svg">
+                        </div>
+                        <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+                    </div>
+
+                    <div class="child">
+                        <div class="child_header">
+                            <h3>How do I reset my password?</h3>
+                            <img src="/images/icon-arrow-down.svg">
+                        </div>
+                        <p>  Click “Forgot password” from the login page or “Change password” from your profile page.
+                            A reset link will be emailed to you.</p>
+                    </div>
+
+                    <div class="child">
+                        <div class="child_header">
+                            <h3>Can I cancel my subscription?</h3>
+                            <img src="/images/icon-arrow-down.svg">
+                        </div>
+                        <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+                    </div>
+
+                    <div class="child">
+                        <div class="child_header">
+                            <h3>Do you provide additional support?</h3>
+                            <img src="/images/icon-arrow-down.svg">
+                        </div>
+                        <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+                    </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script>
+        const childHeaders = document.querySelectorAll(".child_header");
+        childHeaders.forEach(item => item.addEventListener("click", activate));
+
+        function activate(e) {
+            const activeElement = document.querySelector(".child_header.active");
+            if (activeElement && activeElement != e.currentTarget) {
+                activeElement.classList.remove("active")}; 
+                e.currentTarget.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
